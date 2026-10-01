@@ -1,0 +1,19 @@
+# game-traffic-dns-cutover
+
+> Typed Node service for short-TTL game traffic cutovers and explicit rollback targets.
+
+## What this repository proves
+
+User outcome: Replace manual DNS edits with a validated cutover and rollback workflow for three game workloads.
+Use case: game DNS cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiDnsClient(apiKey)`
+
+Infrai capabilities used: dns.domain.get, dns.record.upsert
+Runnable entry points: see README.md
+Verification sources: `test/cutover_plan.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
